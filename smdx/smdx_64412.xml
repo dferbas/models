@@ -1,0 +1,692 @@
+<sunSpecModels v="1">
+  <!-- 64412:  VarioString-->
+  <model id="64412" len="90" name="variostring">
+    <block len="90">
+      <point id="vsModel" offset="0" type="string" len="16" access="r" />
+      <point id="vsFID" offset="16" type="string" len="16" access="r" />
+      <point id="vsSwVersion" offset="32" type="string" len="16" access="r" />
+      <point id="vsState" offset="48" type="enum16" len="1" access="r" >
+        <symbol id="off">0</symbol> 
+        <symbol id="on">1</symbol>
+      </point>
+      <point id="vsErrType" offset="49" type="enum16" len="1" access="r" >
+        <symbol id="none">0</symbol> 
+        <symbol id="overVoltageBattery">1</symbol>
+        <symbol id="overVoltagePV">2</symbol> 
+        <symbol id="overVoltagePV1">3</symbol>
+        <symbol id="overVoltagePV2">4</symbol> 
+        <symbol id="overCurrentPV">5</symbol>
+        <symbol id="overCurrentPV1">6</symbol> 
+        <symbol id="overCurrentPV2">7</symbol>
+        <symbol id="groundBattery">8</symbol> 
+        <symbol id="groundPV">9</symbol>
+        <symbol id="groundPV1">10</symbol> 
+        <symbol id="groundPV2">11</symbol>
+        <symbol id="overTemperature">12</symbol> 
+        <symbol id="underVoltageBattery">13</symbol>
+        <symbol id="cabling">14</symbol> 
+        <symbol id="other">15</symbol>
+      </point>
+      <point id="vsBatteryTemp" offset="50" type="float32" len="2" access="r" />
+      <point id="vsBatteryCyclePhase" offset="52" type="enum16" len="1" access="r" >
+        <symbol id="bulk">0</symbol> 
+        <symbol id="absorption">1</symbol>
+        <symbol id="equalize">2</symbol> 
+        <symbol id="floating">3</symbol>
+        <symbol id="rFloating">6</symbol> 
+        <symbol id="perAbsorption">7</symbol>
+      </point>
+      <point id="vsBatteryVoltage" offset="53" type="float32" len="2" access="r" />
+      <point id="vsBatteryCurrent" offset="55" type="float32" len="2" access="r" />
+      <point id="vsSynState" offset="57" type="enum16" len="1" access="r" >
+        <symbol id="xtSlave">4</symbol> 
+        <symbol id="vtSlave">5</symbol>
+        <symbol id="vtMaster">8</symbol> 
+        <symbol id="autonomy">9</symbol>
+        <symbol id="vsSlave">10</symbol> 
+        <symbol id="vsMaster">11</symbol>
+      </point>
+      <point id="vsPVWiringType" offset="58" type="enum16" len="1" access="r" >
+        <symbol id="unknown">0</symbol>
+        <symbol id="independent">1</symbol> 
+        <symbol id="series">2</symbol>
+        <symbol id="parallel">3</symbol> 
+        <symbol id="error">4</symbol>
+      </point>
+      <point id="vsPVPower" offset="59" type="float32" len="2" access="r" />
+      <point id="vsPV1Power" offset="61" type="float32" len="2" access="r" />
+      <point id="vsPV2Power" offset="63" type="float32" len="2" access="r" />
+      <point id="vsPVVoltage" offset="65" type="float32" len="2" access="r" />
+      <point id="vsPV1Voltage" offset="67" type="float32" len="2" access="r" />
+      <point id="vsPV2Voltage" offset="69" type="float32" len="2" access="r" />
+      <point id="vsPVCurrent" offset="71" type="float32" len="2" access="r" />
+      <point id="vsPV1Current" offset="73" type="float32" len="2" access="r" />
+      <point id="vsPV2Current" offset="75" type="float32" len="2" access="r" />
+      <point id="vsPVProducedEnergy" offset="77" type="float32" len="2" access="r" />
+      <point id="vsPV1ProducedEnergy" offset="79" type="float32" len="2" access="r" />
+      <point id="vsPV2ProducedEnergy" offset="81" type="float32" len="2" access="r" />
+      <point id="vsPVOperatingMode" offset="83" type="enum16" len="1" access="r" >
+        <symbol id="night">0</symbol>
+        <symbol id="security">1</symbol> 
+        <symbol id="off">2</symbol>
+        <symbol id="charge">3</symbol> 
+        <symbol id="chargeVoltage">4</symbol>
+        <symbol id="chargeCurrent">5</symbol>
+        <symbol id="chargePower">6</symbol> 
+        <symbol id="chargeCurrentPV">7</symbol>
+        <symbol id="chargeTemperature">8</symbol> 
+        <symbol id="chargeCurrentBSP">10</symbol>
+      </point>
+      <point id="vsPV1OperatingMode" offset="84" type="enum16" len="1" access="r" >
+        <symbol id="night">0</symbol>
+        <symbol id="security">1</symbol> 
+        <symbol id="off">2</symbol>
+        <symbol id="charge">3</symbol> 
+        <symbol id="chargeVoltage">4</symbol>
+        <symbol id="chargeCurrent">5</symbol>
+        <symbol id="chargePower">6</symbol> 
+        <symbol id="chargeCurrentPV">7</symbol>
+        <symbol id="chargeTemperature">8</symbol> 
+        <symbol id="chargeCurrentBSP">10</symbol>
+      </point>
+      <point id="vsPV2OperatingMode" offset="85" type="enum16" len="1" access="r" >
+        <symbol id="night">0</symbol>
+        <symbol id="security">1</symbol> 
+        <symbol id="off">2</symbol>
+        <symbol id="charge">3</symbol> 
+        <symbol id="chargeVoltage">4</symbol>
+        <symbol id="chargeCurrent">5</symbol>
+        <symbol id="chargePower">6</symbol> 
+        <symbol id="chargeCurrentPV">7</symbol>
+        <symbol id="chargeTemperature">8</symbol> 
+        <symbol id="chargeCurrentBSP">10</symbol>
+      </point>
+      <point id="vsAUX1RelayState" offset="86" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vsAUX1RelayMode" offset="87" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol>
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol> 
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+      <point id="vsAUX2RelayState" offset="88" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vsAUX2RelayMode" offset="89" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol>
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol> 
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+    </block>
+  </model>
+  <strings id="64412" locale="en">
+    <model>
+      <label>Studer VarioString Model</label>
+      <description>Studer-Innotec VarioString Model</description>
+      <notes></notes>
+    </model>
+    <point id="vsModel">
+      <label>VS Model</label>
+      <description>15074</description>
+      <notes></notes>
+    </point>
+    <point id="vsFID">
+      <label>VS FID</label>
+      <description>15102-15103</description>
+      <notes></notes>
+    </point>
+    <point id="vsSwVersion">
+      <label>Software Version</label>
+      <description>15077-15078</description>
+      <notes></notes>
+    </point>
+    <point id="vsState">
+      <label>State</label>
+      <description>15108</description>
+      <notes></notes>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="on">
+        <label>Online</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsErrType">
+      <label>Error Type</label>
+      <description>15049</description>
+      <notes></notes>
+      <symbol id="none">
+        <label>None</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overVoltageBattery">
+        <label>Over Voltage Battery</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overVoltagePV">
+        <label>Over Voltage PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overVoltagePV1">
+        <label>Over Voltage PV 1</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overVoltagePV2">
+        <label>Over Voltage PV 2</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overCurrentPV">
+        <label>Over Current PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overCurrentPV1">
+        <label>Over Current PV 1</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overCurrentPV2">
+        <label>Over Current PV 2</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="groundBattery">
+        <label>Ground Battery</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="groundPV">
+        <label>Ground PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="groundPV1">
+        <label>Ground PV 1</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="groundPV2">
+        <label>Ground PV 2</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overTemperature">
+        <label>Over Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="underVoltageBattery">
+        <label>under Voltage Battery</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="cabling">
+        <label>Cabling</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="other">
+        <label>Other</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsBatteryTemp">
+      <label>Battery Temperature</label>
+      <description>15032</description>
+      <notes></notes>
+    </point>
+    <point id="vsBatteryCyclePhase">
+      <label>Battery Cycle Phase</label>
+      <description>15002</description>
+      <notes></notes>
+      <symbol id="bulk">
+        <label>Bulk</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="absorption">
+        <label>Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="equalize">
+        <label>Equalize</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="floating">
+        <label>Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="rFloating">
+        <label>R Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="perAbsorption">
+        <label>Per Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsBatteryVoltage">
+      <label>Battery Voltage</label>
+      <description>15000</description>
+      <notes></notes>
+    </point>
+    <point id="vsBatteryCurrent">
+      <label>Battery Current</label>
+      <description>15001</description>
+      <notes></notes>
+    </point>
+    <point id="vsSynState">
+      <label>Synchronization State</label>
+      <description>15051</description>
+      <notes></notes>
+      <symbol id="xtSlave">
+        <label>XTender Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vtSlave">
+        <label>VarioTrack Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vtMaster">
+        <label>VarioTrack Master</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="autonomy">
+        <label>Autonomy</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vsSlave">
+        <label>VarioString Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vsMaster">
+        <label>VarioString Master</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsPVWiringType">
+      <label>PV Type of Wiring</label>
+      <description>15003</description>
+      <notes></notes>
+      <symbol id="unknown">
+        <label>Unknown</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="independent">
+        <label>Independent</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="series">
+        <label>Series</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="parallel">
+        <label>Parallel</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="error">
+        <label>Error</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsPVPower">
+      <label>PV Power</label>
+      <description>if {15003}=2 or 3 then {15010};if Model=VS-70, use only this value, if Model=VS-120, use {15010}if wiring is 'series' or 'parallel'</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV1Power">
+      <label>PV Power 1</label>
+      <description>if {15003}=1 then {15011};Only if Model=VS-120 and wiring is 'independent' use {15011}, else no value</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV2Power">
+      <label>PV Power 2</label>
+      <description>if {15012}=1 then {15012};Only if Model=VS-120 and wiring is 'independent' use {15012}, else no value</description>
+      <notes></notes>
+    </point>
+    <point id="vsPVVoltage">
+      <label>PV Voltage</label>
+      <description>if {15003}=2 or 3 then {15004};if Model=VS-70, use only this value, if Model=VS-120, use this value if wiring is 'series' or 'parallel'</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV1Voltage">
+      <label>PV Voltage 1</label>
+      <description>if {15003}=1 then {15005};Only if Model=VS-120 and wiring is 'independent' use {15005}, else no value</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV2Voltage">
+      <label>PV Voltage 2</label>
+      <description>if {15003}=1 then {15006};Only if Model=VS-120 and wiring is 'independent' use {15006}, else no value</description>
+      <notes></notes>
+    </point>
+    <point id="vsPVCurrent">
+      <label>PV Current</label>
+      <description>15007</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV1Current">
+      <label>PV Current 1</label>
+      <description>15008</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV2Current">
+      <label>PV Current 2</label>
+      <description>15009</description>
+      <notes></notes>
+    </point>
+    <point id="vsPVProducedEnergy">
+      <label>PV Produced Energy</label>
+      <description>15017</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV1ProducedEnergy">
+      <label>PV Produced Energy 1</label>
+      <description>15018</description>
+      <notes></notes>
+    </point>
+    <point id="vsPV2ProducedEnergy">
+      <label>PV Produced Energy 2</label>
+      <description>15019</description>
+      <notes></notes>
+    </point>
+    <point id="vsPVOperatingMode">
+      <label>PV Operating Mode</label>
+      <description>15013</description>
+      <notes></notes>
+      <symbol id="night">
+        <label>Night</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="security">
+        <label>Security</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charge">
+        <label>Charge</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeVoltage">
+        <label>Charge Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrent">
+        <label>Charge Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargePower">
+        <label>Charge Power</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentPV">
+        <label>Charge Current PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeTemperature">
+        <label>Charge Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentBSP">
+        <label>Charge Current BSP</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsPV1OperatingMode">
+      <label>PV 1 Operating Mode</label>
+      <description>15014</description>
+      <notes></notes>
+      <symbol id="night">
+        <label>Night</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="security">
+        <label>Security</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charge">
+        <label>Charge</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeVoltage">
+        <label>Charge Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrent">
+        <label>Charge Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargePower">
+        <label>Charge Power</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentPV">
+        <label>Charge Current PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeTemperature">
+        <label>Charge Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentBSP">
+        <label>Charge Current BSP</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsPV2OperatingMode">
+      <label>PV 2 Operating Mode</label>
+      <description>15015</description>
+      <notes></notes>
+      <symbol id="night">
+        <label>Night</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="security">
+        <label>Security</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charge">
+        <label>Charge</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeVoltage">
+        <label>Charge Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrent">
+        <label>Charge Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargePower">
+        <label>Charge Power</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentPV">
+        <label>Charge Current PV</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeTemperature">
+        <label>Charge Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrentBSP">
+        <label>Charge Current BSP</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsAUX1RelayState">
+      <label>State of Auxillary Aux 1</label>
+      <description>15088</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsAUX1RelayMode">
+      <label>Relay Aux 1 Mode</label>
+      <description>15090</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual On</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsAUX2RelayState">
+      <label>State of Auxillary Aux 2</label>
+      <description>15089</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vsAUX2RelayMode">
+      <label>Relay Aux 2 Mode</label>
+      <description>15091</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual On</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+  </strings>
+</sunSpecModels>

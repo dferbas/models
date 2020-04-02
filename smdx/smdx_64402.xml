@@ -1,0 +1,124 @@
+<sunSpecModels v="1">
+  <!-- 64402:  SysTable-->
+  <model id="64402" len="34" name="SysTable">
+    <block len="1">
+      <point id="RBCount" offset="0" type="uint16" len="1" access="r" />
+    </block>
+    <block type="repeating" len="33" name="">
+      <point id="sysPhase" offset="0" type="uint16" len="1" access="r" />
+      <point id="sysInVoltage" offset="1" type="float32" len="2" access="r" />
+      <point id="sysInVoltageMin" offset="3" type="float32" len="2" access="r" />
+      <point id="sysInVoltageMax" offset="5" type="float32" len="2" access="r" />
+      <point id="sysInCurrent" offset="7" type="float32" len="2" access="r" />
+      <point id="sysInCurrentMin" offset="9" type="float32" len="2" access="r" />
+      <point id="sysInCurrentMax" offset="11" type="float32" len="2" access="r" />
+      <point id="sysInFrequency" offset="13" type="float32" len="2" access="r" />
+      <point id="sysInFrequencyMin" offset="15" type="float32" len="2" access="r" />
+      <point id="sysInFrequencyMax" offset="17" type="float32" len="2" access="r" />
+      <point id="sysInApparentPower" offset="19" type="float32" len="2" access="r" />
+      <point id="sysInActivePower" offset="21" type="float32" len="2" access="r" />
+      <point id="sysOutVoltage" offset="23" type="float32" len="2" access="r" />
+      <point id="sysOutCurrent" offset="25" type="float32" len="2" access="r" />
+      <point id="sysOutFrequency" offset="27" type="float32" len="2" access="r" />
+      <point id="sysOutApparentPower" offset="29" type="float32" len="2" access="r" />
+      <point id="sysOutActivePower" offset="31" type="float32" len="2" access="r" />      
+    </block>
+  </model>
+  <strings id="64402" locale="en">
+    <model>
+      <label>Studer System Phase Value Model</label>
+      <description>Studer-Innotec System Phase Value Model</description>
+      <notes></notes>
+    </model>
+    <point id="RBCount">
+      <label>Repeating Block Count</label>
+      <description>Number of Blocks (Phases)</description>
+      <notes></notes>
+    </point>
+    <point id="sysPhase">
+      <label>Phase</label>
+      <description></description>
+      <notes></notes>
+    </point>
+    <point id="sysInVoltage">
+      <label>Input Voltage</label>
+      <description>3113</description>
+      <notes></notes>
+    </point>
+    <point id="sysInVoltageMin">
+      <label>Input Voltage Min</label>
+      <description>3011</description>
+      <notes></notes>
+    </point>
+    <point id="sysInVoltageMax">
+      <label>Input Voltage Max</label>
+      <description>3012</description>
+      <notes></notes>
+    </point>
+    <point id="sysInCurrent">
+      <label>Input Current</label>
+      <description>3116</description>
+      <notes></notes>
+    </point>
+    <point id="sysInCurrentMin">
+      <label>Input Current Min</label>
+      <description>3114</description>
+      <notes></notes>
+    </point>
+    <point id="sysInCurrentMax">
+      <label>Input Current Max</label>
+      <description>3115</description>
+      <notes></notes>
+    </point>
+    <point id="sysInFrequency">
+      <label>Input Frequency</label>
+      <description>3122</description>
+      <notes></notes>
+    </point>
+    <point id="sysInFrequencyMin">
+      <label>Input Frequency Min</label>
+      <description>3120</description>
+      <notes></notes>
+    </point>
+    <point id="sysInFrequencyMax">
+      <label>Input Frequency Max</label>
+      <description>3121</description>
+      <notes></notes>
+    </point>
+    <point id="sysInApparentPower">
+      <label>Input Power</label>
+      <description>3013</description>
+      <notes></notes>
+    </point>
+    <point id="sysInActivePower">
+      <label>Input Active Power</label>
+      <description>3088</description>
+      <notes></notes>
+    </point>
+    <point id="sysOutVoltage">
+      <label>Output Voltage</label>
+      <description>3021</description>
+      <notes></notes>
+    </point>
+    <point id="sysOutCurrent">
+      <label>Output Current</label>
+      <description>3022</description>
+      <notes></notes>
+    </point>
+    <point id="sysOutFrequency">
+      <label>Output Frequency</label>
+      <description>3085</description>
+      <notes></notes>
+    </point>
+    <point id="sysOutApparentPower">
+      <label>Output Power</label>
+      <description>3023</description>
+      <notes></notes>
+    </point>
+    <point id="sysOutActivePower">
+      <label>Output Active Power</label>
+      <description>3087</description>
+      <notes></notes>
+    </point>
+  </strings>
+</sunSpecModels>

@@ -1,0 +1,597 @@
+<sunSpecModels v="1">
+  <!-- 64411:  VarioTrack-->
+  <model id="64411" len="73" name="variotrack">
+    <block len="73">
+      <point id="vtModel" offset="0" type="string" len="16" access="r" />
+      <point id="vtFID" offset="16" type="string" len="16" access="r" />
+      <point id="vtSwVersion" offset="32" type="string" len="16" access="r" />
+      <point id="vtBatteryNominalVoltage" offset="48" type="float32" len="2" access="r" />
+      <point id="vtState" offset="50" type="enum16" len="1" access="r" >
+        <symbol id="off">0</symbol> 
+        <symbol id="on">1</symbol>
+      </point>
+      <point id="vtErrType" offset="51" type="enum16" len="1" access="r" >
+        <symbol id="noError">0</symbol> 
+        <symbol id="batteryOverVoltage">1</symbol>
+        <symbol id="earth">2</symbol> 
+        <symbol id="noBattery">3</symbol>
+        <symbol id="overTemperature">4</symbol> 
+        <symbol id="batteryOverVoltage">5</symbol>
+        <symbol id="pvOverVoltage">6</symbol> 
+        <symbol id="others">7</symbol>
+        <symbol id="driv12Voltage">8</symbol> 
+        <symbol id="underCurrent">9</symbol>
+        <symbol id="int12Voltage">10</symbol>
+        <symbol id="overCurrent">11</symbol> 
+        <symbol id="hardError">12</symbol>
+      </point>
+      <point id="vtBatteryVoltage" offset="52" type="float32" len="2" access="r" />
+      <point id="vtBatteryCurrent" offset="54" type="float32" len="2" access="r" />
+      <point id="vtBatteryCyclePhase" offset="56" type="enum16" len="1" access="r" >
+        <symbol id="bulk">0</symbol> 
+        <symbol id="absorption">1</symbol>
+        <symbol id="equalize">2</symbol> 
+        <symbol id="floating">3</symbol>
+        <symbol id="xtSlave">4</symbol> 
+        <symbol id="vtSlave">5</symbol>
+        <symbol id="rFloating">6</symbol>
+        <symbol id="perAbsorption">7</symbol> 
+      </point>
+      <point id="vtSynState" offset="57" type="enum16" len="1" access="r" >
+        <symbol id="xtSlave">4</symbol> 
+        <symbol id="vtSlave">5</symbol>
+        <symbol id="vtMaster">8</symbol> 
+        <symbol id="autonomy">9</symbol>
+        <symbol id="vsSlave">10</symbol>
+        <symbol id="vsMaster">11</symbol>
+      </point>
+      <point id="vtPVGenVol" offset="58" type="float32" len="2" access="r" />
+      <point id="vtPVGenPow" offset="60" type="float32" len="2" access="r" />
+      <point id="vtBatteryTemp" offset="62" type="float32" len="2" access="r" />
+      <point id="vtOperatingMode" offset="64" type="enum16" len="1" access="r" >
+        <symbol id="night">0</symbol> 
+        <symbol id="startUp">1</symbol>
+        <symbol id="scanning">2</symbol> 
+        <symbol id="charger">3</symbol>
+        <symbol id="manual">4</symbol> 
+        <symbol id="security">5</symbol>
+        <symbol id="off">6</symbol> 
+        <symbol id="slave">7</symbol>
+        <symbol id="charge">8</symbol> 
+        <symbol id="chargeVoltage">9</symbol>
+        <symbol id="chargeCurrent">10</symbol>
+        <symbol id="chargeTemperature">11</symbol> 
+      </point>
+      <point id="vtAUX1RelayState" offset="65" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vtAUX1RelayMode" offset="66" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol>
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+      <point id="vtAUX2RelayState" offset="67" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vtAUX2RelayMode" offset="68" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol>
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+      <point id="vtAUX3RelayState" offset="69" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vtAUX3RelayMode" offset="70" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol>
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+      <point id="vtAUX4RelayState" offset="71" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="vtAUX4RelayMode" offset="72" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol>
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+    </block>
+  </model>
+  <strings id="64411" locale="en">
+    <model>
+      <label>Studer VarioTrack Model</label>
+      <description>Studer-Innotec VarioTrack Model</description>
+      <notes></notes>
+    </model>
+    <point id="vtModel">
+      <label>VT Model</label>
+      <description>11015</description>
+      <notes></notes>
+    </point>
+    <point id="vtFID">
+      <label>VT FID</label>
+      <description>11067-11068</description>
+      <notes></notes>
+    </point>
+    <point id="vtSwVersion">
+      <label>Software Version</label>
+      <description>11050-11051</description>
+      <notes></notes>
+    </point>
+    <point id="vtBatteryNominalVoltage">
+      <label>Battery Nominal Voltage</label>
+      <description>11048</description>
+      <notes></notes>
+    </point>
+    <point id="vtState">
+      <label>State</label>
+      <description>11069</description>
+      <notes></notes>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="on">
+        <label>Online</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtErrType">
+      <label>Error Type</label>
+      <description>11034</description>
+      <notes></notes>
+      <symbol id="noError">
+        <label>No Error</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="batteryOverVoltage">
+        <label>Battery Over Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="earth">
+        <label>Earth</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="noBattery">
+        <label>No Battery</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overTemperature">
+        <label>Over Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="batteryOverVoltage">
+        <label>Battery Over Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="pvOverVoltage">
+        <label>PV Over Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="others">
+        <label>Others</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="driv12Voltage">
+        <label>Driv 12 Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="underCurrent">
+        <label>Under Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="int12Voltage">
+        <label>Int 12 Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="overCurrent">
+        <label>Over Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="hardError">
+        <label>Hard Error</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtBatteryVoltage">
+      <label>Battery Voltage</label>
+      <description>11000</description>
+      <notes></notes>
+    </point>
+    <point id="vtBatteryCurrent">
+      <label>Battery Current</label>
+      <description>11001</description>
+      <notes></notes>
+    </point>
+    <point id="vtBatteryCyclePhase">
+      <label>Battery Cycle Phase</label>
+      <description>11038</description>
+      <notes></notes>
+      <symbol id="bulk">
+        <label>Bulk</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="absorption">
+        <label>Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="equalize">
+        <label>Equalize</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="floating">
+        <label>Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="xtSlave">
+        <label>XTender Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vtSlave">
+        <label>VarioTrack Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="rFloating">
+        <label>R Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="perAbsorption">
+        <label>Per Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtSynState">
+      <label>Synchronization State</label>
+      <description>11066</description>
+      <notes></notes>
+      <symbol id="xtSlave">
+        <label>XTender Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vtSlave">
+        <label>VarioTrack Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vtMaster">
+        <label>VarioTrack Master</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="autonomy">
+        <label>Autonomy</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vsSlave">
+        <label>VarioString Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="vsMaster">
+        <label>VarioString Master</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtPVGenVol">
+      <label>Voltage of the PV generator</label>
+      <description>11002</description>
+      <notes></notes>
+    </point>
+    <point id="vtPVGenPow">
+      <label>Power of the PV generator</label>
+      <description>11004</description>
+      <notes></notes>
+    </point>
+    <point id="vtBatteryTemp">
+      <label>Battery Temperature</label>
+      <description>11005; Only if BTS-01 or BSP present</description>
+      <notes></notes>
+    </point>
+    <point id="vtOperatingMode">
+      <label>Operating Mode</label>
+      <description>11016</description>
+      <notes></notes>
+      <symbol id="night">
+        <label>Night</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="startUp">
+        <label>Start Up</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="scanning">
+        <label>Scanning</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charger">
+        <label>Charger</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manual">
+        <label>Manual</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="security">
+        <label>Security</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="slave">
+        <label>Slave</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charge">
+        <label>Charge</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeVoltage">
+        <label>Charge Voltage</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeCurrent">
+        <label>Charge Current</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="chargeTemperature">
+        <label>Charge Temperature</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX1RelayState">
+      <label>State of Auxillary Relay 1</label>
+      <description>11061</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX1RelayMode">
+      <label>Relay AUX 1 Mode</label>
+      <description>11063</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX2RelayState">
+      <label>State of Auxillary Relay 2</label>
+      <description>11062</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX2RelayMode">
+      <label>Relay AUX 2 Mode</label>
+      <description>11064</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX3RelayState">
+      <label>State of Auxillary Relay 3</label>
+      <description>11077</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX3RelayMode">
+      <label>Relay AUX 3 Mode</label>
+      <description>11079</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX4RelayState">
+      <label>State of Auxillary Relay 4</label>
+      <description>11078</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="vtAUX4RelayMode">
+      <label>Relay AUX 4 Mode</label>
+      <description>11080</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+  </strings>
+</sunSpecModels>

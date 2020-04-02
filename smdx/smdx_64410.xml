@@ -1,0 +1,437 @@
+<sunSpecModels v="1">
+  <!-- 64410:  XTender-->
+  <model id="64410" len="98" name="xtender">
+    <block len="98">
+      <point id="xtModel" offset="0" type="string" len="16" access="r" />
+      <point id="xtFID" offset="16" type="string" len="16" access="r" />
+      <point id="xtSwVersion" offset="32" type="string" len="16" access="r" />
+      <point id="xtIdBatteryVoltage" offset="48" type="float32" len="2" access="r" />
+      <point id="xtDefinedPhase" offset="50" type="float32" len="2" access="r" />
+      <point id="xtState" offset="52" type="enum16" len="1" access="r" >
+        <symbol id="off">0</symbol> 
+        <symbol id="on">1</symbol>
+      </point>
+      <point id="xtBatteryVoltage" offset="53" type="float32" len="2" access="r" />
+      <point id="xtBatteryChargeCurrent" offset="55" type="float32" len="2" access="r" />
+      <point id="xtBatteryCyclePhase" offset="57" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="bulk">1</symbol>
+        <symbol id="absorption">2</symbol> 
+        <symbol id="equalise">3</symbol>
+        <symbol id="floating">4</symbol> 
+        <symbol id="rFloating">5</symbol>
+        <symbol id="perAbsorption">6</symbol>
+        <symbol id="mixing">7</symbol>
+        <symbol id="forming">8</symbol>     
+      </point>
+      <point id="xtInVoltage" offset="58" type="float32" len="2" access="r" />
+      <point id="xtInVoltageMin" offset="60" type="float32" len="2" access="r" />
+      <point id="xtInVoltageMax" offset="62" type="float32" len="2" access="r" />
+      <point id="xtInCurrent" offset="64" type="float32" len="2" access="r" />
+      <point id="xtInCurrentMin" offset="66" type="float32" len="2" access="r" />
+      <point id="xtInCurrentMax" offset="68" type="float32" len="2" access="r" />
+      <point id="xtInFrequency" offset="70" type="float32" len="2" access="r" />
+      <point id="xtInFrequencyMin" offset="72" type="float32" len="2" access="r" />
+      <point id="xtInFrequencyMax" offset="74" type="float32" len="2" access="r" />
+      <point id="xtInApparentPower" offset="76" type="float32" len="2" access="r" />
+      <point id="xtInActivePower" offset="78" type="float32" len="2" access="r" />
+      <point id="xtOutVoltage" offset="80" type="float32" len="2" access="r" />
+      <point id="xtOutCurrent" offset="82" type="float32" len="2" access="r" />
+      <point id="xtOutFrequency" offset="84" type="float32" len="2" access="r" />
+      <point id="xtOutApparentPower" offset="86" type="float32" len="2" access="r" />
+      <point id="xtOutActivePower" offset="88" type="float32" len="2" access="r" />
+      <point id="xtOperatingState" offset="90" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="inverter">1</symbol>
+        <symbol id="charger">2</symbol> 
+        <symbol id="boost">3</symbol>
+        <symbol id="injection">4</symbol> 
+      </point>
+      <point id="xtTransferRelay" offset="91" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="xtRemoteEntryState" offset="92" type="enum16" len="1" access="r" >
+        <symbol id="rmEn0">0</symbol> 
+        <symbol id="rmEn1">1</symbol>
+      </point>
+      <point id="xtBatteryPriorityActive" offset="93" type="uint16" len="1" access="r" />
+      <point id="xtAUX1RelayState" offset="94" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="xtAUX1RelayMode" offset="95" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol> 
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+      <point id="xtAUX2RelayState" offset="96" type="enum16" len="1" access="r" >
+        <symbol id="opened">0</symbol> 
+        <symbol id="closed">1</symbol>
+      </point>
+      <point id="xtAUX2RelayMode" offset="97" type="enum16" len="1" access="r" >
+        <symbol id="invalidValue">0</symbol> 
+        <symbol id="automatic">1</symbol>
+        <symbol id="reversedAutomatic">2</symbol> 
+        <symbol id="manualOn">3</symbol>
+        <symbol id="manualOff">4</symbol> 
+        <symbol id="coupledForGeneratorStart">5</symbol>
+      </point>
+    </block>
+  </model>
+  <strings id="64410" locale="en">
+    <model>
+      <label>Studer Xtender Model</label>
+      <description>Studer-Innotec Xtender Model</description>
+      <notes></notes>
+    </model>
+    <point id="xtModel">
+      <label>XT Model</label>
+      <description>3124-3125</description>
+      <notes></notes>
+    </point>
+    <point id="xtFID">
+      <label>XT FID</label>
+      <description>3056-3057</description>
+      <notes></notes>
+    </point>
+    <point id="xtSwVersion">
+      <label>Software Version</label>
+      <description>3030-3031</description>
+      <notes></notes>
+    </point>
+    <point id="xtIdBatteryVoltage">
+      <label>ID Battery Voltage</label>
+      <description>3127</description>
+      <notes></notes>
+    </point>
+    <point id="xtDefinedPhase">
+      <label>Defined Phase</label>
+      <description>3089</description>
+      <notes></notes>
+    </point>
+    <point id="xtState">
+      <label>State</label>
+      <description>3049</description>
+      <notes></notes>
+      <symbol id="off">
+        <label>Offline</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="on">
+        <label>Online</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtBatteryVoltage">
+      <label>Battery Voltage</label>
+      <description>3092</description>
+      <notes></notes>
+    </point>
+    <point id="xtBatteryChargeCurrent">
+      <label>Battery Charge Current</label>
+      <description>3095</description>
+      <notes></notes>
+    </point>
+    <point id="xtBatteryCyclePhase">
+      <label>Battery Cycle Current</label>
+      <description>3010</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="bulk">
+        <label>Bulk</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="absorption">
+        <label>Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="equalise">
+        <label>Equalise</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="floating">
+        <label>Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="rFloating">
+        <label>R Floating</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="perAbsorption">
+        <label>Per Absorption</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="mixing">
+        <label>Mixing</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="forming">
+        <label>Forming</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtInVoltage">
+      <label>Input Voltage</label>
+      <description>3113</description>
+      <notes></notes>
+    </point>
+    <point id="xtInVoltageMin">
+      <label>Input Voltage Min</label>
+      <description>3111</description>
+      <notes></notes>
+    </point>
+    <point id="xtInVoltageMax">
+      <label>Input Voltage Max</label>
+      <description>3112</description>
+      <notes></notes>
+    </point>
+    <point id="xtInCurrent">
+      <label>Input Current</label>
+      <description>3116</description>
+      <notes></notes>
+    </point>
+    <point id="xtInCurrentMin">
+      <label>Input Current Min</label>
+      <description>3114</description>
+      <notes></notes>
+    </point>
+    <point id="xtInCurrentMax">
+      <label>Input Current Max</label>
+      <description>3115</description>
+      <notes></notes>
+    </point>
+    <point id="xtInFrequency">
+      <label>Input Frequency</label>
+      <description>3122</description>
+      <notes></notes>
+    </point>
+    <point id="xtInFrequencyMin">
+      <label>Input Frequency Min</label>
+      <description>3120</description>
+      <notes></notes>
+    </point>
+    <point id="xtInFrequencyMax">
+      <label>Input Frequency Max</label>
+      <description>3121</description>
+      <notes></notes>
+    </point>
+    <point id="xtInApparentPower">
+      <label>Input Apparent Power</label>
+      <description>3138</description>
+      <notes></notes>
+    </point>
+    <point id="xtInActivePower">
+      <label>Input Active Power</label>
+      <description>3119</description>
+      <notes></notes>
+    </point>
+    <point id="xtOutVoltage">
+      <label>Output Voltage</label>
+      <description>3021</description>
+      <notes></notes>
+    </point>
+    <point id="xtOutCurrent">
+      <label>Output Current</label>
+      <description>3022</description>
+      <notes></notes>
+    </point>
+    <point id="xtOutFrequency">
+      <label>Output Frequency</label>
+      <description>3110</description>
+      <notes></notes>
+    </point>
+    <point id="xtOutApparentPower">
+      <label>Output Apparent Power</label>
+      <description>3139</description>
+      <notes></notes>
+    </point>
+    <point id="xtOutActivePower">
+      <label>Output Active Power</label>
+      <description>3101</description>
+      <notes></notes>
+    </point>
+    <point id="xtOperatingState">
+      <label>Operating State</label>
+      <description></description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="inverter">
+        <label>Inverter</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="charger">
+        <label>Charger</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="boost">
+        <label>Boost</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="injection">
+        <label>Injection</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtTransferRelay">
+      <label>State of Transfer Relay</label>
+      <description>3020</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtRemoteEntryState">
+      <label>Remote Entry State</label>
+      <description>3086</description>
+      <notes></notes>
+      <symbol id="rmEn0">
+        <label>Remote Entry 0</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="rmEn1">
+        <label>Remote Entry 1</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtBatteryPriorityActive">
+      <label>Battery Priority Active</label>
+      <description>3161</description>
+      <notes></notes>
+    </point>
+    <point id="xtAUX1RelayState">
+      <label>State of Auxillary Relay 1</label>
+      <description>3031</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtAUX1RelayMode">
+      <label>Relay AUX 1 Mode</label>
+      <description>3054</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual On</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtAUX2RelayState">
+      <label>State of Auxillary Relay 2</label>
+      <description>3032</description>
+      <notes></notes>
+      <symbol id="opened">
+        <label>Opened</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="closed">
+        <label>Closed</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+    <point id="xtAUX2RelayMode">
+      <label>Relay AUX 2 Mode</label>
+      <description>3055</description>
+      <notes></notes>
+      <symbol id="invalidValue">
+        <label>Invalid Value</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="automatic">
+        <label>Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="reversedAutomatic">
+        <label>Reversed Automatic</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOn">
+        <label>Manual On</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="manualOff">
+        <label>Manual Off</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+      <symbol id="coupledForGeneratorStart">
+        <label>Generator Start</label>
+        <description></description>
+        <notes></notes>
+      </symbol>
+    </point>
+  </strings>
+</sunSpecModels>

@@ -1,0 +1,68 @@
+<sunSpecModels v="1">
+  <!-- 64401:  System-->
+  <model id="64401" len="18" name="System">
+    <block len="18">
+      <point id="sysBatteryVoltage" offset="0" type="float32" len="2" access="r" />
+      <point id="sysBatteryTemp" offset="2" type="float32" len="2" access="r" />
+      <point id="sysBatteryCurrent" offset="4" type="float32" len="2" access="r" />
+      <point id="sysStateOfCharge" offset="6" type="float32" len="2" access="r" />
+      <point id="sysChargedToday" offset="8" type="float32" len="2" access="r" />
+      <point id="sysDischargedToday" offset="10" type="float32" len="2" access="r" />
+      <point id="sysPVPower" offset="12" type="float32" len="2" access="r" />
+      <point id="sysPVChargingCurrent" offset="14" type="float32" len="2" access="r" />
+      <point id="sysPVEnergyToday" offset="16" type="float32" len="2" access="r" />
+    </block>
+  </model>
+  <strings id="64401" locale="en">
+    <model>
+      <label>Studer System Model</label>
+      <description>Studer-Innotec System Model</description>
+      <notes></notes>
+    </model>
+    <point id="sysBatteryVoltage">
+      <label>Battery Voltage</label>
+      <description>{7000};If no BSP(601) present, get from 100 {3000}, if not present get from 300 {11000}, in not present get from 700 {15000}</description>
+      <notes></notes>
+    </point>
+    <point id="sysBatteryTemp">
+      <label>Battery Temperature</label>
+      <description>{7029};If no BSP(601) present, get from 100 {3001}, if not present get from 300 {11005}, in not present get from 700 {15032}</description>
+      <notes></notes>
+    </point>
+    <point id="sysBatteryCurrent">
+      <label>Battery Current</label>
+      <description>{7001};If no BSP present, add all Ibatt of all XT, VT and VS</description>
+      <notes></notes>
+    </point>
+    <point id="sysStateOfCharge">
+      <label>State of Charge</label>
+      <description>{7032};ONLY if BSP present</description>
+      <notes></notes>
+    </point>
+    <point id="sysChargedToday">
+      <label>Charged Today</label>
+      <description>{7007};ONLY if BSP present</description>
+      <notes></notes>
+    </point>
+    <point id="sysDischargedToday">
+      <label>Discharged Today</label>
+      <description>{7008};ONLY if BSP present</description>
+      <notes></notes>
+    </point>
+    <point id="sysPVPower">
+      <label>PV Power</label>
+      <description>{11004}+ {15010};Add PV power of all VarioTracks + VarioStrings</description>
+      <notes></notes>
+    </point>
+    <point id="sysPVChargingCurrent">
+      <label>PV Charging Current</label>
+      <description>{11001}+ {15001};Add battery current of all VarioTracks + VarioStrings</description>
+      <notes></notes>
+    </point>
+    <point id="sysPVEnergyToday">
+      <label>PV Energy Today</label>
+      <description>{11007}+ {15017};Add all daily production of alll VT + VS</description>
+      <notes></notes>
+    </point>
+  </strings>
+</sunSpecModels>

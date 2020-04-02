@@ -1,0 +1,129 @@
+<sunSpecModels v="1">
+  <!-- 64400: Read / Write Any Parameter -->
+        <!--
+  <model id="64400" len="6" name="param">
+    <block len="6">
+        -->
+  <model id="64400" len="5" name="param">
+    <block len="5">
+      <point id="ParNum" offset="0" type="uint16" len="1" access="rw" mandatory="true" />
+      <point id="ParType" offset="1" type="enum16" len="1" access="rw" mandatory="true" >
+        <symbol id="Integer">0</symbol> 
+        <symbol id="Enum">1</symbol>
+        <symbol id="Byte">2</symbol>
+        <symbol id="Float">3</symbol>
+        <!--
+        <symbol id="String">4</symbol>
+        -->
+      </point>
+      <point id="ParValue" offset="2" type="float32" len="2" access="rw" mandatory="true" />
+      <point id="ParCmd" offset="4" type="bitfield16" len="1" access="rw" mandatory="true" >
+        <symbol id="READ">32</symbol>
+        <symbol id="WRITE">16</symbol> 
+      </point>
+      <!--
+      <point id="ParCast" offset="5" type="enum16" len="1" access="rw" mandatory="true" >
+        <symbol id="MultiCast">0</symbol> 
+        <symbol id="Phase1">1</symbol>
+        <symbol id="Phase2">2</symbol>
+        <symbol id="Phase3">3</symbol>
+		<symbol id="UniCast">4</symbol>
+      </point>
+      -->
+    </block>
+  </model>
+  <strings id="64400" locale="en">
+    <model>
+      <label>Studer Parameter Read / Write</label>
+      <description>Special Model to read and write Studer-Innotec device parameters</description>
+      <notes></notes>
+    </model>
+    <point id="ParNum">
+      <label>Parameter Number</label>
+      <description>Parameter number to be read or written (input)</description>
+      <notes></notes>
+    </point>
+    <point id="ParType">
+      <label>Parameter Type</label>
+      <description>Type of value, corresponding to the parameter (READ: output, WRITE: input)</description>
+      <notes>This type is used for data transfer between Solar Monitor and Studer, see ParValue for its notes.</notes>
+      <symbol id="Integer">
+        <label>Integer32</label>
+        <description>32 bit signed value, big endian</description>
+        <notes>Studer INT32 type.</notes>
+      </symbol> 
+      <symbol id="Enum">
+        <label>Enum16</label>
+        <description>32 bit signed value, only 16 bits used</description>
+        <notes>Studer SHORT_ENUM type.</notes>
+      </symbol>
+      <symbol id="Byte">
+        <label>Integer8</label>
+        <description>32 bit signed value, only 8 bits used</description>
+        <notes>Studer BOOL type.</notes>
+      </symbol>
+      <symbol id="Float">
+        <label>Float32</label>
+        <description>float in 32 bit IEEE 754 format, big endian</description>
+        <notes>Studer FLOAT type.</notes>
+      </symbol>
+      <!--
+      <symbol id="String">
+        <label>String32</label>
+        <description>1st 4 characters</description>
+        <notes>ISO_8859-15 string of 8 bit characters</notes>
+      </symbol>
+      -->
+    </point>
+    <point id="ParValue">
+      <label>Parameter Value</label>
+      <description>Read value (output) or value to be written (input)</description>
+      <notes>This value is always in Float32 format.</notes>
+    </point>
+    <point id="ParCmd">
+     <label>Parameter Command</label>
+      <description>Command to be issued (read or write command is set and then this field is polled until the bit gets cleared)</description>
+      <notes></notes>
+      <symbol id="READ">
+        <label>Read Command</label>
+        <description>Set this bit to initiate a read operation</description>
+        <notes>Also the ParNum field must be written previously or concurrently. ParType and ParValue is an ouput from this command.</notes>
+      </symbol> 
+      <symbol id="WRITE">
+        <label>Write Command</label>
+        <description>Set this bit to initiate a write operation</description>
+        <notes>All 3 other fields ParNum, ParType and ParValue must be written previously or concurrently.</notes>
+      </symbol> 
+    </point>
+	<point id="ParCast">
+      <label>Parameter Type</label>
+      <description>Type of value, corresponding to the parameter (READ: output, WRITE: input)</description>
+      <notes>This type is used for data transfer between Solar Monitor and Studer, see ParValue for its notes.</notes>
+      <symbol id="MultiCast">
+        <label>All phases multicast</label>
+        <description>for all phases (multicast)</description>
+        <notes></notes>
+      </symbol> 
+      <symbol id="Phase1">
+        <label>Phase 1</label>
+        <description>for phase 1 only</description>
+        <notes></notes>
+      </symbol>
+      <symbol id="Phase2">
+        <label>Phase 2</label>
+        <description>for phase 2 only</description>
+        <notes></notes>
+      </symbol>
+      <symbol id="Phase3">
+        <label>Phase 3</label>
+        <description>for phase 3 only</description>
+        <notes></notes>
+      </symbol>
+      <symbol id="UniCast">
+        <label>All phases unicast</label>
+        <description>for all phases (unicast)</description>
+        <notes>cannot be used for system device</notes>
+      </symbol>
+    </point>
+  </strings>
+</sunSpecModels>

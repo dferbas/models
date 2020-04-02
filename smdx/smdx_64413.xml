@@ -1,0 +1,80 @@
+<sunSpecModels v="1">
+  <!-- 64413:  BSP-->
+  <model id="64413" len="64" name="bsp">
+    <block len="64">
+      <point id="bspModel" offset="0" type="string" len="16" access="r" />
+      <point id="bspFID" offset="16" type="string" len="16" access="r" />
+      <point id="bspSwVersion" offset="32" type="string" len="16" access="r" />
+      <point id="bspBatteryVoltage" offset="48" type="float32" len="2" access="r" />
+      <point id="bspBatteryCurrent" offset="50" type="float32" len="2" access="r" />
+      <point id="bspStateOfCharge" offset="52" type="float32" len="2" access="r" />
+      <point id="bspPower" offset="54" type="float32" len="2" access="r" />
+      <point id="bspBatteryTemp" offset="56" type="float32" len="2" access="r" />
+      <point id="bspRemainingAutonomy" offset="58" type="float32" len="2" access="r" />
+      <point id="bspAhChargedToday" offset="60" type="float32" len="2" access="r" />
+      <point id="bspAhDischargedToday" offset="62" type="float32" len="2" access="r" />
+    </block>
+  </model>
+  <strings id="64413" locale="en">
+    <model>
+      <label>Studer BSP Model</label>
+      <description>Studer-Innotec Battery Status Processor Model</description>
+      <notes></notes>
+    </model>
+    <point id="bspModel">
+      <label>BSP Model</label>
+      <description>7034</description>
+      <notes></notes>
+    </point>
+    <point id="bspFID">
+      <label>BSP FID</label>
+      <description>7048-7049</description>
+      <notes></notes>
+    </point>
+    <point id="bspSwVersion">
+      <label>Software Version</label>
+      <description>7037-7038</description>
+      <notes></notes>
+    </point>
+    <point id="bspBatteryVoltage">
+      <label>Battery Voltage</label>
+      <description>7030</description>
+      <notes></notes>
+    </point>
+    <point id="bspBatteryCurrent">
+      <label>Battery Current</label>
+      <description>7031</description>
+      <notes></notes>
+    </point>
+    <point id="bspStateOfCharge">
+      <label>State Of Charge</label>
+      <description>7002</description>
+      <notes></notes>
+    </point>
+    <point id="bspPower">
+      <label>BSP Power</label>
+      <description>7003</description>
+      <notes></notes>
+    </point>
+    <point id="bspBatteryTemp">
+      <label>Battery Temperature</label>
+      <description>7029</description>
+      <notes></notes>
+    </point>
+    <point id="bspRemainingAutonomy">
+      <label>Remaining Autonomy</label>
+      <description>7004</description>
+      <notes></notes>
+    </point>
+    <point id="bspAhChargedToday">
+      <label>Charged Today</label>
+      <description>7007</description>
+      <notes></notes>
+    </point>
+    <point id="bspAhDischargedToday">
+      <label>Discharge Today</label>
+      <description>7008</description>
+      <notes></notes>
+    </point>
+  </strings>
+</sunSpecModels>
